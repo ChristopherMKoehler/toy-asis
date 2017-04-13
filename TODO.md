@@ -25,12 +25,12 @@ to implement the above.
 
 * The specified author name must match the last name of one of the first 3 authors on the specified manuscript to be accepted.
 * Name matching specifications/rules:
-      * ignore surrounding whitespace and case
-      * accept match on first 3 chars (e.g. Jon for Jones)
-      * reject match on less than 3 chars (e.g. Jo for Jones)
-      * accept exact match for 2 char author name (e.g. Li for Li)
-      * reject exact match on 1 char author name
-      * reject mismatch on chars beyond 3 (e.g. reject Jonis for Jones)
+  * ignore surrounding whitespace and case
+  * accept match on first 3 chars (e.g. Jon for Jones)
+  * reject match on less than 3 chars (e.g. Jo for Jones)
+  * accept exact match for 2 char author name (e.g. Li for Li)
+  * reject exact match on 1 char author name
+  * reject mismatch on chars beyond 3 (e.g. reject Jonis for Jones)
 
 ------------------------------
 
