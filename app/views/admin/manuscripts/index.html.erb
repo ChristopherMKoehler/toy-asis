@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Authors</th>
+  </tr>
+  <% @manuscripts.each do |m| %>
+  <tr>
+    <td><%= m.code %></td>
+    <td>
+      <%= m.authors.map { |a| a.publish_name }.join(' ') %>
+    </td>
+  </tr>
+  <% end %>
+</table>
