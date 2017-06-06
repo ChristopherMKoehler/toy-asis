@@ -26,6 +26,8 @@ We want to implement a simple author inquiry system for authors to view the stat
 * Visit http://localhost:3000/admin/manuscripts to confirm the app is up and running.
   You should see a crude looking page that shows info about the above manuscript(s).
   
+Please note, the ```/admin``` namespace is just there to verify basic sanity and is not where your code should go. The features you are adding are intended to be used by authors wanting to view the status of their papers.
+
 ### Specifications
 
 See TODO.md
