@@ -2,6 +2,7 @@
 
 We are implementing a simple author inquiry system for authors to view the status of their submitted manuscripts.
 
+Please note, the ```/admin``` namespace is just there to verify basic sanity and is not where your code should go. The features you are adding are intended to be used by authors wanting to view the status of their papers.
 
 ## Instructions
 
