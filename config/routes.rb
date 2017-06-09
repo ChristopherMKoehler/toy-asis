@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :manuscripts, only: [:index]
   end
 
+  resources :inquiry, only: [:index]
+  resources :manuscript, only: [:index]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

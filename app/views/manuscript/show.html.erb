@@ -1,0 +1,21 @@
+<div class="">
+  <%= link_to '<button type="button">Back to Home</button>'.html_safe, root_url %>
+  <%= link_to '<button type="button">Back to Search</button>'.html_safe, inquiry_index_url %>
+  <h1> <%= @manuscript.title %> </h1>
+  <h2>Code</h2>
+  <p> <%= @manuscript.code %> </p>
+
+  <h2>Authors</h2>
+  <ul class="authors">
+    <% @manuscript.authors.each do |auth| %>
+      <li><%= auth.publish_name %></li>
+    <% end %>
+  </ul>
+
+  <h2>Status</h2>
+  <p><%= @manuscript.status %></p>
+
+  <h2>Status Date</h2>
+  <p><%= @manuscript.status_date %></p>
+
+</div>

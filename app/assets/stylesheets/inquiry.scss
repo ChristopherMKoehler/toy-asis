@@ -1,0 +1,42 @@
+// Place all the styles related to the Inquiry controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1, p, button, input {
+  font-family: verdana;
+}
+
+button:hover {
+  background: lightgray;
+  cursor: pointer;
+}
+
+.errors {
+  color: red;
+}
+
+.inquiry-form {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  flex-direction: column;
+}
+
+.txt, .sub {
+  margin-top: 10px;
+  height: 30px;
+}
+
+.txt {
+  font-size: 15px;
+}
+
+.sub {
+  align-self: center;
+  width: 30%;
+}
+
+.sub:hover {
+  background: lightgray;
+  cursor: pointer;
+}

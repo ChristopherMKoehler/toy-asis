@@ -6,6 +6,6 @@ class Author
   field :publish_name, type: String
 
   def last_name
-    publish_name.split(',').first
+    publish_name.split(',').first.strip
   end
 end

@@ -1,0 +1,2 @@
+module ManuscriptHelper
+end
