@@ -2,10 +2,10 @@
   <%= link_to '<button type="button">Back to Home</button>'.html_safe, root_url %>
   <h1>Manuscript Status Inquiry</h1>
   <p class="errors"><%= flash[:errors]  %></p>
-  <form class="inquiry-form" action="/manuscript" method="get">
+  <form class="inquiry-form" action="/inquiry/new" method="get">
     <input class="txt" type="text" placeholder="Code" name="code" value=<%= @code %>>
     <input class="txt" type="text" placeholder="Last Name" name="last_name" value=<%= @lname %>>
-
+    <input type="hidden" name="submitted" value="true">
     <input class="sub" type="submit" name="" value="Submit">
   </form>
 </div>
