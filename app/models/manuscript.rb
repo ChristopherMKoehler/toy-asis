@@ -9,31 +9,21 @@ class Manuscript
   field :status_date, type: Date
 
   def self.find_manuscript(code, last_name)
-    Mongoid.raise_not_found_error = false
-    manuscript = Manuscript.find_by(code: code)
+    found_author = false
+    last_name = last_name.strip.downcase
 
-    if manuscript
-      last_name = last_name.strip.downcase
-      authors = manuscript.authors.map{ |auth| auth.last_name.downcase }
+    if last_name.length > 1
+      Mongoid.raise_not_found_error = false
+      manuscript = Manuscript.find_by(code: code)
 
-      found_author = false
-      if last_name.length > 1
-        authors[0...3].each do |ln|
-          if ln.length < last_name.length
-            next
-          elsif last_name.length > 2
-            if ln.index(last_name) === 0
-              found_author = true
-              break
-            end
-          elsif ln === last_name
-            found_author = true
-            break
-          end
-        end
+      if manuscript
+        authors = manuscript.authors[0...3].map{ |auth| auth.last_name.downcase }
+        #Are there any author names with the following two traits
+        #1. if the last_name's length is greater than two, does it appear at the beginning of the author's last name?
+        #2. if the last_name is exactly equal to the last name of the author
+        found_author = authors.any?{ |auth| (auth === last_name) || (auth.index(last_name) === 0 && last_name.length > 2) }
       end
     end
-
     found_author ? manuscript : nil
   end
 end

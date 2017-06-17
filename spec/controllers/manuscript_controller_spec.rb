@@ -21,7 +21,7 @@ describe ManuscriptController do
       end
 
       get :index, {code: "AA1001", last_name: "pol"}
-      expect(response).to redirect_to("http://test.host/inquiry?code=AA1001&errors=Manuscript+not+found.&lname=pol")
+      expect(response).to redirect_to("http://test.host/inquiry?code=AA1001&lname=pol")
 
     end
   end
